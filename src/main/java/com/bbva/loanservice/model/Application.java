@@ -1,4 +1,4 @@
-package com.bbva.loanapplication.model;
+package com.bbva.loanservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

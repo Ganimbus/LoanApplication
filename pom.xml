@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.BBVA</groupId>
-    <artifactId>LoanApplication</artifactId>
+    <artifactId>LoanService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>LoanApplication</name>
     <description>LoanApplication</description>

@@ -1,7 +1,7 @@
-package com.bbva.loanapplication.controller;
+package com.bbva.loanservice.controller;
 
-import com.bbva.loanapplication.model.Application;
-import com.bbva.loanapplication.repository.AppRepository;
+import com.bbva.loanservice.model.Application;
+import com.bbva.loanservice.repository.LoanServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,22 +9,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Application")
-public class AppController {
+public class LoanServiceController {
     @Autowired
-    private AppRepository appRepository;
+    private LoanServiceRepository loanServiceRepository;
 
     @GetMapping("/all")
     public List<Application> getAllApplication(){
-        return appRepository.findAll();
+        return loanServiceRepository.findAll();
     }
 
     @PostMapping("/add")
     public List<Application> addApplication(@RequestBody List<Application> Application){
-        return appRepository.saveAll(Application);
+        return loanServiceRepository.saveAll(Application);
     }
 
     @DeleteMapping("/delete/{id_app}")
     public void deleteApplication(@PathVariable Long id_app){
-        appRepository.deleteById(Math.toIntExact(id_app));
+        loanServiceRepository.deleteById(Math.toIntExact(id_app));
     }
 }
